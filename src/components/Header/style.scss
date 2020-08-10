@@ -1,0 +1,12 @@
+.header {
+  text-align: center;
+  padding: 1rem;
+
+  &-logo {
+    width: 150px;
+    @media (min-width: 700px) {
+      width: 300px;
+    }
+
+  }
+}

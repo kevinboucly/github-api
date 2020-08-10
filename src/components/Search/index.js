@@ -1,7 +1,15 @@
 import React from 'react';
+import { Segment, Input } from 'semantic-ui-react';
 
 const Search = () => (
-  <div>Search</div>
+  <Segment>
+    <Input
+      placeholder="Veuillez saisir une recherche"
+      icon="search"
+      iconPosition="left"
+      fluid
+    />
+  </Segment>
 );
 
 export default Search;

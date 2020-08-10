@@ -4,6 +4,7 @@ import Search from 'src/components/Search';
 import Message from 'src/components/Message';
 import Results from 'src/components/Results';
 
+import './style.scss';
 
 const App = () => (
   <div className="app">

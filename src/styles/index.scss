@@ -1,8 +1,9 @@
 @import 'reset';
 @import 'vars';
 
-body {
+html body {
   font-family: sans-serif;
+  background-color: $dark-grey;
 }
 
 /* 

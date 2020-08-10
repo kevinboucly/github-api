@@ -1,7 +1,10 @@
 import React from 'react';
+import { Message as MessageSemanticUi} from 'semantic-ui-react';
 
 const Message = () => (
-  <div>Message</div>
+  <MessageSemanticUi>
+    123 résultats
+  </MessageSemanticUi>
 );
 
 export default Message;
