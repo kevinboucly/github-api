@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Results = ({ repos }) => (
   <Card.Group itemsPerRow={3} stackable>
-  {console.log("repos",repos)}
+  {/* {console.log("repos",repos)} */}
     {repos.map((repo) => <Repo key={repo.id} {...repo} />)}
   </Card.Group>
 
