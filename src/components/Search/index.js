@@ -2,10 +2,11 @@ import React from 'react';
 import { Segment, Input, Form } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-const Search = ({ doSearch, searchedValue, setSearchedValue }) => (
+const Search = ({ doSearch, searchedValue, setSearchedValue, loading }) => (
   <Segment>
     <Form onSubmit={doSearch}>
       <Input
+        loading={loading}
         placeholder="Veuillez saisir une recherche"
         icon="search"
         iconPosition="left"
@@ -23,6 +24,7 @@ Search.propTypes = {
   doSearch: PropTypes.func.isRequired,
   searchedValue: PropTypes.string.isRequired,
   setSearchedValue: PropTypes.func.isRequired,
+  loading: PropTypes.bool.isRequired,
 
 };
 export default Search;
