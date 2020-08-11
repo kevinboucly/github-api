@@ -11,10 +11,11 @@ import './style.scss';
 
 const App = () => {
   const [repos, setRepos] = useState([]);
+  const [searchedValue, setSearchedValue] = useState('');
 
   const doSearch = () => {
     console.log('ici je vais faire ma recherche ');
-    axios.get('https://api.github.com/search/repositories?q=react')
+    axios.get(`https://api.github.com/search/repositories?q=${searchedValue}`)
       .then((response) => {
         console.log(response);
         setRepos(response.data.items);
@@ -26,7 +27,11 @@ const App = () => {
   return (
     <div className="app">
       <Header />
-      <Search doSearch={doSearch} />
+      <Search
+        doSearch={doSearch}
+        searchedValue={searchedValue}
+        setSearchedValue={setSearchedValue}
+      />
       <Message sentence="aucun repo" hasError />
       <Results repos={repos} />
     </div>

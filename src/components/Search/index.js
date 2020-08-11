@@ -2,7 +2,7 @@ import React from 'react';
 import { Segment, Input, Form } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 
-const Search = ({ doSearch }) => (
+const Search = ({ doSearch, searchedValue, setSearchedValue }) => (
   <Segment>
     <Form onSubmit={doSearch}>
       <Input
@@ -10,6 +10,10 @@ const Search = ({ doSearch }) => (
         icon="search"
         iconPosition="left"
         fluid
+        value={searchedValue}
+        onChange={(event) => {
+          setSearchedValue(event.target.value);
+        }}
       />
     </Form>
   </Segment>
@@ -17,5 +21,8 @@ const Search = ({ doSearch }) => (
 
 Search.propTypes = {
   doSearch: PropTypes.func.isRequired,
+  searchedValue: PropTypes.string.isRequired,
+  setSearchedValue: PropTypes.func.isRequired,
+
 };
 export default Search;
